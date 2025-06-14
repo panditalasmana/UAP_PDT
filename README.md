@@ -47,4 +47,7 @@ $stmt = $db->prepare($query);
 $stmt->execute([$motorcycle_id, $rental_date, $return_date]);
 $result = $stmt->fetch(PDO::FETCH_ASSOC); ```
 
+### Backup Otomatis
+Pada sistem ini, telah diimplementasikan fitur Task Scheduler menggunakan <code> MySQL Event Scheduler </code> untuk menjalankan proses backup otomatis data penyewaan. Task ini dibuat dalam bentuk event bernama daily_backup yang dijalankan setiap hari pada pukul 23:59 waktu server.
+
 
