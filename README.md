@@ -27,7 +27,8 @@ Stored procedure pada NaRiPa Wheels digunakan untuk memproses penyewaan motor se
 
 Trigger <code> log_rental_cancellation </code> berfungsi mencatat pembatalan penyewaan ke dalam tabel, setiap kali status penyewaan diubah menjadi cancelled. Trigger hanya aktif jika status penyewaan berubah menjadi cancelled dari status selain cancelled.
  ```php
- IF OLD.status != 'cancelled' AND NEW.status = 'cancelled' THEN ```
+ IF OLD.status != 'cancelled' AND NEW.status = 'cancelled' THEN
+```php
 
 Trigger <code>log_rental_cancellation</code> berfungsi mencatat pembatalan penyewaan ke dalam tabel, setiap kali status penyewaan diubah menjadi cancelled. Trigger hanya aktif jika status penyewaan berubah menjadi cancelled dari status selain cancelled.
 
