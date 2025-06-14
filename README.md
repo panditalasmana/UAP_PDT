@@ -29,5 +29,6 @@ Trigger <code> log_rental_cancellation </code> berfungsi mencatat pembatalan pen
  ```php
  IF OLD.status != 'cancelled' AND NEW.status = 'cancelled' THEN ```
 
+
 Trigger <code> log_rental_deletion </code> berfungsi mencatat histori penghapusan penyewaan ke tabel rental_history saat data dihapus dari tabel rentals. Trigger hanya aktif saat ada perintah <code>DELETE </code> terhadap tabel rentals.
   
