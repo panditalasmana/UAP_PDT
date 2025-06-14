@@ -40,7 +40,6 @@ Dalam sistem penyewaan motor ini, fitur transaction digunakan untuk menjaga kons
 ![image](https://github.com/user-attachments/assets/8b2e8681-3257-40b4-95aa-661370af74de)
 
 Stored function berfungsi untuk mengecek ketersediaan motor sebelum proses penyewaan dilakukan. Fungsi ini bertugas memastikan bahwa motor yang dipilih oleh pengguna masih tersedia dan tidak sedang dalam proses penyewaan oleh orang lain pada rentang tanggal yang sama.
-
  ```php
 $query = "SELECT cekKetersediaan(?, ?, ?) as available";
 $stmt = $db->prepare($query);
