@@ -5,3 +5,6 @@ Proyek ini merupakan sistem yang berfungsi mempermudah proses penyewaan sepeda m
 # Detail Konsep
 ## Disclaimer
 Dalam proyek Naripa Wheels, penerapan stored procedure, trigger, transaction, dan stored function dirancang khusus untuk menangani proses bisnis penyewaan motor secara efisien, aman, dan terkontrol.
+
+### Stored Procedure 
+Stored procedure pada NaRiPa Wheels digunakan untuk memproses penyewaan motor secara otomatis. Menangani validasi tanggal, pengecekan ketersediaan, perhitungan harga sewa, serta pencatatan data ke tabel rentals. Dengan prosedur ini, proses penyewaan lebih terstruktur dan mudah dipanggil dari aplikasi.
