@@ -13,6 +13,7 @@ Stored procedure pada NaRiPa Wheels digunakan untuk memproses penyewaan motor se
 ![image](https://github.com/user-attachments/assets/30077580-71b4-4726-b572-bcbb8466ee58)
 
 Procedure yang digunakan : 
+`naripa-wheels\user\rent.php`
 //<code>naripa-wheels\user\rent.php </code>
 - <code> buatPenyewaan(p_user_id,p_motorcycle_id INT,p_rental_date DATE,p_return_date DATE,p_result)</code>: berfungsi untuk membuat transaksi penyewaan motor secara otomatis. 
   ```php
