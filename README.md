@@ -20,3 +20,6 @@ Stored procedure pada NaRiPa Wheels digunakan untuk memproses penyewaan motor se
            $query = "CALL buatPenyewaan(?, ?, ?, ?, @result)";
             $stmt = $db->prepare($query);
             $stmt->execute([$_SESSION['user_id'], $motorcycle_id, $rental_date, $return_date]); ```
+
+  ### Trigger
+  Trigger <code> log_rental_cancellation </code>
