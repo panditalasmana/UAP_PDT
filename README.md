@@ -50,4 +50,15 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 ### Backup Otomatis
 Pada sistem ini, telah diimplementasikan fitur Task Scheduler menggunakan <code> MySQL Event Scheduler </code> untuk menjalankan proses backup otomatis data penyewaan. Task ini dibuat dalam bentuk event bernama daily_backup yang dijalankan setiap hari pada pukul 23:59 waktu server.
 
+### Relevansi Proyek dengan Pemrosesan Data Terdistribusi
+Sistem ini dirancang dengan memperhatikan prinsip-prinsip dasar dalam pemrosesan data terdistribusi.
+- Konsistensi: Semua proses penyewaan dilakukan melalui stored procedure buatPenyewaan, yang mencakup validasi tanggal, pengecekan ketersediaan motor, hingga pengurangan stok secara atomik.
+- Reliabilitas: Dengan penggunaan transaction dan error handler, sistem mampu menangani gangguan atau kegagalan saat proses penyewaan. Jika terjadi kesalahan pada salah satu tahap, maka seluruh transaksi akan dibatalkan dengan ROLLBACK, sehingga data tidak rusak atau setengah tersimpan.
+- Integritas: Logika bisnis utama disimpan di tingkat database melalui stored procedure, function, dan trigger, sehingga meskipun sistem diakses dari berbagai sumber—seperti antarmuka web, layanan API, atau aplikasi mobile—semua aturan dan mekanisme tetap konsisten, tanpa perlu duplikasi logika di sisi klien.
+Dengan desain seperti ini, sistem penyewaan motor Naripa Wheels mendukung prinsip-prinsip pemrosesan terdistribusi yang kuat.
+
+
+
+
+
 
