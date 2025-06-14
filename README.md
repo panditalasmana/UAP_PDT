@@ -34,3 +34,11 @@ Trigger <code> log_rental_deletion </code> berfungsi encatat histori penghapusan
 
 ### Transaction
 Dalam sistem penyewaan motor ini, fitur transaction digunakan untuk menjaga konsistensi dan integritas data saat proses penyewaan dilakukan. Hal ini diimplementasikan melalui stored procedure bernama buatPenyewaan, yang menjalankan beberapa operasi penting secara berurutan, seperti validasi tanggal sewa dan kembali, pengecekan ketersediaan motor, perhitungan total biaya, pencatatan penyewaan pada tabel rentals, serta pengurangan jumlah motor yang tersedia di tabel motorcycles. Untuk memastikan seluruh proses berjalan atomik, prosedur ini menggunakan blok transaksi yang dimulai dengan START TRANSACTION dan diakhiri dengan COMMIT apabila semua proses berhasil. Jika terjadi kesalahan (misalnya saat penyisipan data atau pengurangan stok), maka perubahan dibatalkan secara keseluruhan menggunakan ROLLBACK melalui handler SQLEXCEPTION. Dengan demikian, sistem dapat mencegah terjadinya ketidaksesuaian data seperti stok motor berkurang tanpa data penyewaan yang tercatat. Pendekatan ini juga menyederhanakan pemanggilan dari sisi aplikasi karena seluruh proses transaksi terkonsentrasi di dalam prosedur yang dijalankan langsung oleh database.
+
+
+### Stored Function
+![image](https://github.com/user-attachments/assets/8b2e8681-3257-40b4-95aa-661370af74de)
+
+Stored function berfungsi untuk mengecek ketersediaan motor sebelum proses penyewaan dilakukan. Fungsi ini bertugas memastikan bahwa motor yang dipilih oleh pengguna masih tersedia dan tidak sedang dalam proses penyewaan oleh orang lain pada rentang tanggal yang sama.
+
+
