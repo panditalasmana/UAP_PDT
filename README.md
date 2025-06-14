@@ -3,5 +3,5 @@ Proyek ini merupakan sistem yang berfungsi mempermudah proses penyewaan sepeda m
 ![image](https://github.com/user-attachments/assets/116a211b-9de5-493f-a5bc-bfc834d7af77)
 
 # Detail Konsep
-
-
+## Disclaimer
+Dalam proyek Naripa Wheels, penerapan stored procedure, trigger, transaction, dan stored function dirancang khusus untuk menangani proses bisnis penyewaan motor secara efisien, aman, dan terkontrol.
