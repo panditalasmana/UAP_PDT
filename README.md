@@ -10,7 +10,8 @@ Dalam proyek Naripa Wheels, penerapan stored procedure, trigger, transaction, da
 ### Stored Procedure 
 Stored procedure pada NaRiPa Wheels digunakan untuk memproses penyewaan motor secara otomatis. Menangani validasi tanggal, pengecekan ketersediaan, perhitungan harga sewa, serta pencatatan data ke tabel rentals. Dengan prosedur ini, proses penyewaan lebih terstruktur dan mudah dipanggil dari aplikasi.
 
-![image](https://github.com/user-attachments/assets/30077580-71b4-4726-b572-bcbb8466ee58)
+![image](https://github.com/user-attachments/assets/6dcaa58f-a6d0-46b6-bc39-958bdade2cd4)
+
 
 **Procedure yang digunakan :**  
 `naripa-wheels\user\rent.php`
@@ -23,7 +24,8 @@ Stored procedure pada NaRiPa Wheels digunakan untuk memproses penyewaan motor se
 
 
 ### Trigger
-![image](https://github.com/user-attachments/assets/bdbbb4ca-ef85-4638-8a48-ab3091de18a5)
+![image](https://github.com/user-attachments/assets/3de0fcb8-3e1e-437c-afc1-1378e9618289)
+
 
 Trigger <code> log_rental_cancellation </code> berfungsi mencatat pembatalan penyewaan ke dalam tabel, setiap kali status penyewaan diubah menjadi cancelled. Trigger hanya aktif jika status penyewaan berubah menjadi cancelled dari status selain cancelled.
  ```php
@@ -37,7 +39,8 @@ Dalam sistem penyewaan motor ini, fitur transaction digunakan untuk menjaga kons
 
 
 ### Stored Function
-![image](https://github.com/user-attachments/assets/8b2e8681-3257-40b4-95aa-661370af74de)
+![image](https://github.com/user-attachments/assets/cfb6bbd2-a008-4447-949d-b7ca50eafa83)
+
 
 Stored function berfungsi untuk mengecek ketersediaan motor sebelum proses penyewaan dilakukan. Fungsi ini bertugas memastikan bahwa motor yang dipilih oleh pengguna masih tersedia dan tidak sedang dalam proses penyewaan oleh orang lain pada rentang tanggal yang sama.
 ```php
